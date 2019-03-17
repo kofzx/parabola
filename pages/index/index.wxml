@@ -1,0 +1,12 @@
+<button class="shop" bindtap="addToCart">click</button>
+<view class="cart-basket"></view>
+<view 
+	class="ball"
+	wx:for="{{balls}}"
+	wx:for-item="ball"
+	wx:key="wx:key"
+	style="{{ ball.inited ? 'transition: transform 0.5s ease-in; transform: translate3d(0, ' + offsetY + 'px,0); top: ' + ballY + 'px;' : '' }}">
+	<view 
+		class="inner"
+		style="{{ ball.inited ? 'transition: transform 0.5s linear; transform: translate3d( ' + offsetX + 'px,0,0); left: ' + ballX + 'px; opacity: 1;' : '' }}"></view>
+</view>
